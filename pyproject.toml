@@ -13,5 +13,8 @@ requires-python = ">=3.7"
 [project.scripts]
 readme_from_mkdocs = "readme_from_mkdocs:generate_readme"
 
-[tool.setuptools.packages.find]
-where = ["."]
+# [tool.setuptools.packages.find]
+# where = ["."]
+
+[tool.setuptools]
+packages = ["readme_from_mkdocs"]
