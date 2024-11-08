@@ -8,6 +8,7 @@ def generate_readme_content() -> str:
     en_index = Path("docs/index.md")
     if not en_index.exists():
         logging.warning(f"{en_index} doesn't exist")
+        return ""
         # raise a warning and exit without doing anything
     content = en_index.read_text("utf-8")
     match_pre = re.search(r"</style>\n\n", content)
