@@ -4,6 +4,7 @@ from pathlib import Path
 
 logging.basicConfig(level=logging.INFO)
 
+
 def generate_readme_content() -> str:
     en_index = Path("docs/index.md")
     if not en_index.exists():
@@ -11,7 +12,7 @@ def generate_readme_content() -> str:
         return ""
         # raise a warning and exit without doing anything
     content = en_index.read_text("utf-8")
-    match_pre = re.search(r"</style>\n\n", content)
+    match_pre = re.search(r"</style>", content)
     if not match_pre:
         raise RuntimeError("Couldn't find pre section (<style>) in index.md")
     frontmatter_end = match_pre.end()
@@ -42,7 +43,6 @@ def generate_readme() -> None:
     readme_path.write_text(new_content, encoding="utf-8")
     print("README.md updated")
     return 1
-
 
 
 if __name__ == "__main__":
