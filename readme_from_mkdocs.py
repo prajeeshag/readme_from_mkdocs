@@ -33,11 +33,15 @@ def generate_readme() -> None:
     readme_path = Path("README.md")
     if not readme_path.exists():
         readme_path.write_text("", encoding="utf-8")
+        print("README.md created")
+        return 1
     new_content = generate_readme_content()
     readme_content = readme_path.read_text("utf-8")
     if new_content == readme_content:
-        return
+        return 0
     readme_path.write_text(new_content, encoding="utf-8")
+    print("README.md updated")
+    return 1
 
 
 
