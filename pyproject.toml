@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "pre-commit hook for creating README.md from mkdocs index.md"
 readme = "README.md"
 dependencies = []
+requires-python = ">=3.7"
 
 [project.scripts]
 readme_from_mkdocs = "readme_from_mkdocs:generate_readme"
