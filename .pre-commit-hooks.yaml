@@ -1,5 +1,5 @@
 - id: readme-from-mkdocs
   name: Create README from mkdocs index.md
-  entry: read_from_mkdocs
+  entry: readme_from_mkdocs
   language: python
   stages: [pre-commit]
