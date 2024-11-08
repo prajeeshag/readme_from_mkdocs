@@ -6,4 +6,4 @@ readme = "README.md"
 dependencies = []
 
 [project.scripts]
-readme_from_mkdocs = "readme_from_mkdocs:main"
+readme_from_mkdocs = "readme_from_mkdocs:generate_readme"
