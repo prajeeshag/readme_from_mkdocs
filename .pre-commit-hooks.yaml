@@ -2,4 +2,4 @@
   name: Create README from mkdocs index.md
   entry: read_from_mkdocs
   language: python
-  stages: [commit]
+  stages: [pre-commit]
