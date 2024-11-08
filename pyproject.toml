@@ -1,0 +1,6 @@
+[project]
+name = "readme-from-mkdocs"
+version = "0.1.0"
+description = "pre-commit hook for creating README.md from mkdocs index.md"
+readme = "README.md"
+dependencies = []
