@@ -1,5 +1,9 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "readme-from-mkdocs"
+name = "readme_from_mkdocs"
 version = "0.1.0"
 description = "pre-commit hook for creating README.md from mkdocs index.md"
 readme = "README.md"
@@ -8,3 +12,6 @@ requires-python = ">=3.7"
 
 [project.scripts]
 readme_from_mkdocs = "readme_from_mkdocs:generate_readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
